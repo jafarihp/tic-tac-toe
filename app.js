@@ -48,7 +48,7 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains("circle")
     );
     if (circleWins) {
-      infoDisplay.textContent = "!دایره برنده شد";
+      swal("Win!!!", "دایره برنده شد", "success");
       allSquares.forEach((square) =>
         square.replaceWith(square.cloneNode(true))
       );
@@ -61,7 +61,7 @@ function checkScore() {
       allSquares[cell].firstChild?.classList.contains("cross")
     );
     if (crossWins) {
-      infoDisplay.textContent = "!ضربدر برنده شد";
+      swal("Win!!!", "ضربدر برنده شد", "success");
       allSquares.forEach((square) =>
         square.replaceWith(square.cloneNode(true))
       );
